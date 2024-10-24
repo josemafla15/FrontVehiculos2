@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <h3>
+        Lista de Vehiculos
+    </h3>
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Color</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of vehiculos">
+                    <td>{{v.placa}}</td>
+                    <td>{{v.marca}}</td>
+                    <td>{{v.modelo}}</td>
+                    <td>{{v.color_vehiculo_nombre}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="onEditarNavigate(v.id)" title="Editar">
+                            Editar
+                        </button>&nbsp;
+                    </td>
+                </tr>
+            </tbody>
+                
+        </table>
+    </div>
+</div>
